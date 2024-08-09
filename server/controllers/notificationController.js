@@ -32,10 +32,47 @@ exports.scheduleNotification = async (req, res) => {
 };
 
 // Update notification status
-exports.updateNotificationStatus = async (req, res) => {};
+exports.updateNotificationStatus = async (req, res) => {
+  const { userId, notificationId } = req.body;
+  try {
+    const notification = await Notification.findOne({
+      user_id: userId,
+      _id: notificationId,
+    });
+    if (!notification) {
+      return res.status(404).json({ error: "Notification not found" });
+    }
+    notification.seen = true;
+    await notification.save();
+    res.status(200).json({ message: "Notification status updated" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update notification status" });
+  }
+};
 
 // Get all notifications for a user
-exports.getUserNotifications = async (req, res) => {};
+exports.getUserNotifications = async (req, res) => {
+  const { userId } = req.params;
+  try {
+    const notifications = await Notification.find({ user_id: userId }).sort({
+      timestamp: -1,
+    });
+    res.status(200).json(notifications);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch notifications" });
+  }
+};
 
 // Delete a notification
-exports.deleteNotification = async (req, res) => {};
+exports.deleteNotification = async (req, res) => {
+  const { notificationId } = req.params;
+  try {
+    const result = await Notification.deleteOne({ _id: notificationId });
+    if (result.deletedCount === 0) {
+      return res.status(404).json({ error: "Notification not found" });
+    }
+    res.status(200).json({ message: "Notification deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to delete notification" });
+  }
+};
