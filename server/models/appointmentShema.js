@@ -17,9 +17,10 @@ const appointmentSchema = new mongoose.Schema({
   },
   userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
   date: { type: Date, required: true },
-  time: { type: String, required: true },
+  time: { type: String, required: true }, // e.g., '10:00 AM'
   bookingDateTime: { type: Date, default: Date.now },
-  patientDetails: patientDetailsSchema,
+  patientDetails: patientDetailsSchema, // Array of patient details
 });
 
+// Create and export the model
 module.exports = mongoose.model("Appointment", appointmentSchema);
