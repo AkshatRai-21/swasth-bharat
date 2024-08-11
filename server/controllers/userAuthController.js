@@ -13,7 +13,7 @@ exports.signIn = async (req, res) => {
 
     if (!user) {
       return res
-        .status(403)
+        .status(400)
         .json({ mssg: "User with this email does not exist" });
     }
     const isMatch = await bcrypt.compare(password, user.password);
@@ -21,8 +21,8 @@ exports.signIn = async (req, res) => {
       return res.status(400).json({ mssg: "Incorrect password" });
     }
     const userId = user._id;
-    const token = jwt.sign({ userId }, JWT_SECRET);
-    res.json({ mssg: "Logged in", token: token });
+    const token = jwt.sign({ id: userId }, JWT_SECRET);
+    res.json({ token, ...user._doc });
   } catch (e) {
     console.error(e);
     return res
@@ -60,12 +60,55 @@ exports.signUp = async (req, res) => {
     const userId = newUser._id;
     const token = jwt.sign({ userId }, JWT_SECRET);
     await newUser.save();
-    res.json({ mssg: "User created", newUser, token });
+    res.json(newUser);
   } catch (e) {
     console.error(e);
     return res.status(500).json({
       mssg: "An error occurred while creating the user",
       error: e.message,
     });
+  }
+};
+//idhar changes kre ha
+//tokenIsValid
+exports.tokenIsValid = async (req, res) => {
+  try {
+    const token = req.header("x-auth-token");
+    if (!token) return res.json(false);
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+    if (!verified) return res.json(false);
+
+    const user = await User.findById(verified.id);
+    if (!user) return res.json(false);
+    res.json(true);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+};
+
+// Get User Data
+
+//idhar changes kre gye ha
+
+exports.getUser = async (req, res) => {
+  try {
+    // Extract the token from headers
+    const token = req.header("x-auth-token");
+
+    if (!token) return res.status(401).json({ error: "No token provided" });
+
+    // Verify the token
+    const verified = jwt.verify(token, process.env.JWT_SECRET);
+
+    if (!verified) return res.status(401).json({ error: "Invalid token" });
+
+    // Find the user by ID from the token
+    const user = await User.findById(verified.id);
+
+    if (!user) return res.status(404).json({ error: "User not found" });
+    // Respond with user data and token
+    res.json({ ...user._doc, token });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
   }
 };
