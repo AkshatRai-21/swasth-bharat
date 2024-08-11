@@ -7,6 +7,7 @@ const {
 } = require("../controllers/favouriteController");
 
 // Add Doctor to Favorites
+//changes are there
 router.post("/add-favorite", addFavorite);
 
 // Remove Doctor from Favorites
