@@ -16,15 +16,27 @@ exports.signIn = async (req, res) => {
         .status(400)
         .json({ mssg: "User with this email does not exist" });
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ mssg: "Incorrect password" });
     }
+<<<<<<< HEAD
+
+    const userId = user._id;
+    const token = jwt.sign({ id: userId }, process.env.JWT_SECRET); // Ensure JWT_SECRET is properly defined
+    return res.status(200).json({ token, ...user._doc }); // Add status 200 here
+  } catch (e) {
+=======
     const userId = user._id;
     const token = jwt.sign({ id: userId }, JWT_SECRET);
     res.json({ token, ...user._doc });
   } catch (e) {
     console.error(e);
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
     return res
       .status(500)
       .json({ mssg: "Something went wrong", error: e.message });

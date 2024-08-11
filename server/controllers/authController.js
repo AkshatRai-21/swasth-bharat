@@ -2,6 +2,26 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 // const { check, validationResult } = require("express-validator");
 const auth = require("../middleware/auth");
+<<<<<<< HEAD
+
+// const bcrypt = require("bcryptjs");
+// const jwt = require("jsonwebtoken");
+const { check, validationResult } = require("express-validator");
+const Doctor = require("../models/doctor"); // Make sure to import the Doctor model
+// const auth = require("../middleware/auth");
+
+exports.registerDoctor = [
+  // Validation checks
+  check("email", "Please include a valid email").isEmail(),
+  check(
+    "password",
+    "Please enter a password with 6 or more characters"
+  ).isLength({ min: 6 }),
+
+  // Middleware function
+  async (req, res) => {
+    const errors = validationResult(req);
+=======
 / const bcrypt = require("bcryptjs");
 // const jwt = require("jsonwebtoken");
 const { check, validationResult } = require("express-validator");
@@ -19,6 +39,7 @@ exports.registerDoctor = [
 
   // Middleware function
   async (req, res) => { const errors = validationResult(req);
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
@@ -62,10 +83,18 @@ exports.registerDoctor = [
       console.error(err.message);
       res.status(500).send("Server error");
     }
+<<<<<<< HEAD
+  },
+];
+
+exports.loginDoctor = async (req, res) => {
+  const { email, password } = req.body;
+=======
   },];
 //login doctor
 exports.loginDoctor = async (req, res) => 
   {const { email, password } = req.body;
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
 
   // Validate input (optional, based on your validation setup)
   // If you have validation logic, ensure to include it here
@@ -105,9 +134,16 @@ exports.loginDoctor = async (req, res) =>
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server error");
+<<<<<<< HEAD
+  }
+};
+
+exports.logoutDoctor = (req, res) => {
+=======
   }};
 //logout doctor
 exports.logoutDoctor = (req, res) =>{
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
   try {
     // Optional: Handle logout logic if needed
     // Example: Invalidate token on the client-side or handle session management
@@ -116,4 +152,9 @@ exports.logoutDoctor = (req, res) =>{
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server error");
+<<<<<<< HEAD
+  }
+};
+=======
   }};
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0

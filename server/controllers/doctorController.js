@@ -360,9 +360,16 @@ module.exports = {
   signUpDoctor,
   tokenIsValidDoctor,
   getDoctor,
+<<<<<<< HEAD
+  signUpDoctor,
+=======
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
   searchDoctors,
   saveDateTimeSlots,
   removeDateTimeSlot,
   availableDateTimeSlots,
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> 22ca1995d77cffa5bee5e522d6187696033ff6e0
