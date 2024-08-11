@@ -1,5 +1,4 @@
-
-
+// models/notification.js
 const mongoose = require("mongoose");
 
 // Define the notification schema
