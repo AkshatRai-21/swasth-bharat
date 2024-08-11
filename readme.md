@@ -20,3 +20,114 @@ Blockchain: For secure storage of patient records
 Machine Learning: Firebase ML Kit
 Maps Integration: Google Maps API
 Payment: Apple Pay and Google Pay
+
+
+
+## Backend Deployment
+Our backend is deployed on Render. You can access it using the following base URL:
+**Base URL:**  https://swastha-bharat-backend.onrender.com/
+
+## API Endpoints
+
+### User Authentication and Management
+
+- **POST** `/userAuth/signin`  
+  Description: Sign in a user.
+
+- **POST** `/userAuth/signup`  
+  Description: Sign up a new user with validation.
+
+- **POST** `/userAuth/tokenIsValid`  
+  Description: Check if the token is valid.
+
+- **GET** `/userAuth/getUser`  
+  Description: Retrieve the authenticated user's data.
+
+
+
+
+### Doctor Authentication and Management
+
+- **POST** `/api/doctors/signin`  
+  Description: Sign in a doctor.
+
+- **POST** `/api/doctors/signup`  
+  Description: Sign up a new doctor.
+
+- **POST** `/api/doctors/tokenIsValid`  
+  Description: Check if the doctor's token is valid.
+
+- **POST** `/api/doctors/getDoctor`  
+  Description: Retrieve the authenticated doctor's data.  
+  Note: This route is protected and requires admin privileges.
+
+### Doctor Appointments and Scheduling
+
+- **POST** `/api/doctors/:doctorId/saveDateTimeSlots`  
+  Description: Save date and time slots for a doctor.
+
+- **GET** `/api/doctors/:doctorId/availableDateTimeSlots`  
+  Description: Fetch available date and time slots for a doctor.
+
+- **DELETE** `/api/doctors/:doctorId/removeDateTimeSlot`  
+  Description: Remove a specific date and time slot for a doctor.
+
+### Doctor Directory and Search
+
+- **GET** `/api/doctors/all`  
+  Description: Retrieve all doctors.
+
+- **GET** `/api/doctors/specialty`  
+  Description: Retrieve doctors by specialty.
+
+- **GET** `/api/doctors/near`  
+  Description: Retrieve the nearest doctors.
+
+- **GET** `/api/doctors/search-doctor`  
+  Description: Search for doctors based on specific criteria.
+
+
+
+### Appointments Management
+
+- **POST** `/appointments`  
+  Description: Create a new appointment.
+
+- **GET** `/appointments/:userId`  
+  Description: Retrieve all appointments for a specific user.
+
+- **DELETE** `/delete/appointments/:id`  
+  Description: Delete an appointment by its ID.
+
+### Notifications Management
+
+- **POST** `/user/notifications/push-notification`  
+  Description: Send a push notification to a user.
+
+- **POST** `/user/notifications/add`  
+  Description: Add a new notification.
+
+- **POST** `/user/notifications/schedule`  
+  Description: Schedule a notification for a specific time.
+
+- **POST** `/user/notifications/update`  
+  Description: Update the status of a notification.
+
+- **GET** `/user/notifications/:userId`  
+  Description: Retrieve all notifications for a specific user.
+
+- **DELETE** `/user/notifications/:notificationId`  
+  Description: Delete a notification by its ID.
+
+### Favorites Management
+
+- **POST** `/favourites/add-favorite`  
+  Description: Add a doctor to the user's favorites list.
+
+- **POST** `/favourites/remove-favorite`  
+  Description: Remove a doctor from the user's favorites list.
+
+- **GET** `/favourites/favorites/:userId`  
+  Description: Retrieve the user's list of favorite doctors.
+
+
