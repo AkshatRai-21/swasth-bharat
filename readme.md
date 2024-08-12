@@ -1,4 +1,7 @@
 Swasth Bharat
+
+Welcome to Our App! This is a brief description of what the app does.
+
 Swasth Bharat is a mobile application designed to streamline the process of booking medical appointments with doctors. Developed using Flutter for the front-end, Node.js with Express.js for the back-end, and MongoDB for data storage, this app aims to enhance accessibility to healthcare services by integrating various modern technologies.
 
 Features
@@ -21,6 +24,35 @@ Machine Learning: Firebase ML Kit
 Maps Integration: Google Maps API
 Payment: Apple Pay and Google Pay
 
+
+You can download the latest version of the app by clicking the link below:
+[Download APK]([https://github.com/yourusername/yourrepository/releases/download/v1.0.0/myapp.apk](https://github.com/AkshatRai-21/swasth-bharat/releases/tag/v.1.0))
+
+
+## Features
+
+![register](https://github.com/user-attachments/assets/30a44e86-85b3-4256-8ff2-899d65616a5a)
+
+![signin](https://github.com/user-attachments/assets/c41ed244-1ce5-4548-95b9-e3839c9f274f)
+
+
+![doctor description and appointment](https://github.com/user-attachments/assets/5300cd84-a92f-4fe7-8696-c8ba24d1fc33)
+
+https://github.com/AkshatRai-21/swasth-bharat/issues/10#issue-2459952164
+
+![select appointment slopts](https://github.com/user-attachments/assets/2c11726d-20ea-4c04-8b95-bd313e94fe9b)
+
+![slots](https://github.com/user-attachments/assets/ecd34c82-20c6-4b93-962d-a30a9831703f)
+
+![search doctors](https://github.com/user-attachments/assets/18b033ed-58ee-4e2f-b293-203a27c21243)
+
+![doctor by specialty](https://github.com/user-attachments/assets/348785aa-1835-4a12-93ab-c92cb4a3479a)
+
+![doctor by location](https://github.com/user-attachments/assets/06a95cd0-76f6-492f-ad67-e519b660cdb7)
+
+![appointment details](https://github.com/user-attachments/assets/c3dba47c-7163-4a56-bf6d-44986ab35333)
+
+![appopointment notification](https://github.com/user-attachments/assets/eb8958fa-e342-4465-93af-7bf953087ead)
 
 
 ## Backend Deployment
