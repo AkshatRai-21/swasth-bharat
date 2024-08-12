@@ -31,27 +31,37 @@ You can download the latest version of the app by clicking the link below:
 
 ## Features
 
+# register
 ![register](https://github.com/user-attachments/assets/30a44e86-85b3-4256-8ff2-899d65616a5a)
 
+# signin
 ![signin](https://github.com/user-attachments/assets/c41ed244-1ce5-4548-95b9-e3839c9f274f)
 
-
-![doctor description and appointment](https://github.com/user-attachments/assets/5300cd84-a92f-4fe7-8696-c8ba24d1fc33)
-
+# select doctors
 https://github.com/AkshatRai-21/swasth-bharat/issues/10#issue-2459952164
 
+# read about doctor and book appointemnt
+![doctor description and appointment](https://github.com/user-attachments/assets/5300cd84-a92f-4fe7-8696-c8ba24d1fc33)
+
+# select appointment slots
 ![select appointment slopts](https://github.com/user-attachments/assets/2c11726d-20ea-4c04-8b95-bd313e94fe9b)
 
+# select slots
 ![slots](https://github.com/user-attachments/assets/ecd34c82-20c6-4b93-962d-a30a9831703f)
 
+# search doctors
 ![search doctors](https://github.com/user-attachments/assets/18b033ed-58ee-4e2f-b293-203a27c21243)
 
+# availability of all doctors basis their specialty
 ![doctor by specialty](https://github.com/user-attachments/assets/348785aa-1835-4a12-93ab-c92cb4a3479a)
 
+# doctors near your location with doctors list sorted basis the shortest distance
 ![doctor by location](https://github.com/user-attachments/assets/06a95cd0-76f6-492f-ad67-e519b660cdb7)
 
+# appointment details on home page
 ![appointment details](https://github.com/user-attachments/assets/c3dba47c-7163-4a56-bf6d-44986ab35333)
 
+# appointment notification
 ![appopointment notification](https://github.com/user-attachments/assets/eb8958fa-e342-4465-93af-7bf953087ead)
 
 
