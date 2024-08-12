@@ -29,7 +29,7 @@ https://github.com/user-attachments/assets/0cef4374-0aa6-4ddc-b9af-bb3a29f0e25e
 #
 #
 You can download the latest version of the app by clicking the link below:
-[Download APK]([https://github.com/yourusername/yourrepository/releases/download/v1.0.0/myapp.apk](https://github.com/AkshatRai-21/swasth-bharat/releases/tag/v.1.0))
+**Download APK** : https://github.com/AkshatRai-21/swasth-bharat/releases/tag/v.1.0
 
 
 ## Features
