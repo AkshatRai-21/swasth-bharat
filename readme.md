@@ -1,4 +1,10 @@
-Swasth Bharat
+## Swasth Bharat
+
+## Use Case-Mobile application for scheduling of an appointment for a patient with doctor.
+## Problem Statement – Doctors are lifesavers and that is why they shouldn’t be too far from those who need healthcare. With more and more people having the need to seek medical attention, doctors need to make their services accessible and available to their patients. In this time and age where everything and anything can be found on the internet, we need to take advantage of the digital tools/ channels to enable quick scheduling of appointments.Please envisage and develop a digital solution to give patients the freedom to book the appointments at any time and from anywhere.
+
+#
+#
 
 Welcome to Our App! This is a brief description of what the app does.
 
@@ -23,6 +29,17 @@ Blockchain: For secure storage of patient records
 Machine Learning: Firebase ML Kit
 Maps Integration: Google Maps API
 Payment: Apple Pay and Google Pay
+
+#
+#
+
+## Team Members
+**Akshat Rai (00715002721)**
+**Som Dutta Verma (01915002721)**
+**Ashish Chaudhary (05815002721)**
+**Rajan Kumar Jha (04515002721)**
+#
+#
 
 ## Presentation Video
 https://github.com/user-attachments/assets/0cef4374-0aa6-4ddc-b9af-bb3a29f0e25e
