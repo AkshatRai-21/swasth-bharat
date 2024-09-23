@@ -36,8 +36,10 @@ Payment: Apple Pay and Google Pay
 ## Team Members
 **Akshat Rai (00715002721)** </br>
 **Som Dutta Verma (01915002721)** </br>
+**Anant Dev Singh (09520802721)** </br>
 **Ashish Chaudhary (05815002721)** </br> 
 **Rajan Kumar Jha (04515002721)** </br>
+
 #
 #
 
